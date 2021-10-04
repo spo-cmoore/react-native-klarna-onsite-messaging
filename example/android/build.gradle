@@ -3,13 +3,16 @@
 buildscript {
     ext {
         buildToolsVersion = "29.0.2"
-        minSdkVersion = 16
+        minSdkVersion = 17
         compileSdkVersion = 29
         targetSdkVersion = 29
     }
     repositories {
         google()
         jcenter()
+      maven {
+        url 'https://x.klarnacdn.net/mobile-sdk/'
+      }
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
@@ -30,6 +33,9 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
+      maven {
+        url 'https://x.klarnacdn.net/mobile-sdk/'
+      }
 
         google()
         jcenter()
