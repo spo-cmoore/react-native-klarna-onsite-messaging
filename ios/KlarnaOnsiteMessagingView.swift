@@ -54,6 +54,7 @@ class KlarnaOnsiteMessagingView : UIView {
     
     init() {
         self.osmView = KlarnaOSMView()
+        
         super.init(frame: .zero)
     }
     
@@ -62,6 +63,10 @@ class KlarnaOnsiteMessagingView : UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        if rect == self.osmView.frame {
+            return
+        }
+        
         self.osmView.frame = rect
         
         let amount = Int(purchaseAmount)
@@ -95,9 +100,19 @@ class KlarnaOnsiteMessagingView : UIView {
 extension KlarnaOnsiteMessagingView: KlarnaOSMViewEventListener {
     func klarnaOSMViewResized(_ height: CGFloat) {
         if let onHeightChange = onHeightChange {
-            onHeightChange([
-                "height": height
-            ])
+            if height == 0 {
+                return
+            }
+            
+            
+            if self.frame.height != height {
+                self.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: height)
+                setNeedsDisplay()
+                
+                onHeightChange([
+                    "height": height
+                ])
+            }
         }
     }
 }

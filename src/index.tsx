@@ -1,6 +1,7 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   NativeSyntheticEvent,
+  Platform,
   requireNativeComponent,
   ViewStyle,
 } from 'react-native';
@@ -24,7 +25,7 @@ export type KlarnaOSMViewError = {
 };
 
 export type KlarnaOnsiteMessagingProps = {
-  style: ViewStyle;
+  style?: ViewStyle;
   clientId: string;
   placementKey: string;
   locale: string;
@@ -39,7 +40,7 @@ type InternalKlarnaOnsiteMessagingProps = Omit<
   'onOSMViewError'
 > & {
   onHeightChange: (
-    event: NativeSyntheticEvent<{ height: number; target: number }>
+    event: NativeSyntheticEvent<{ height?: number; target: number }>
   ) => void;
   onOSMViewError: (event: NativeSyntheticEvent<KlarnaOSMViewError>) => void;
 };
@@ -52,18 +53,29 @@ const KlarnaOnsiteMessagingViewManager =
 export const KlarnaOnsiteMessagingView: React.FC<KlarnaOnsiteMessagingProps> = (
   props: KlarnaOnsiteMessagingProps
 ) => {
-  const [height, setHeight] = useState(1);
+  const [height, setHeight] = useState<number | string>(
+    props.style?.height && typeof props.style.height === 'number'
+      ? Number(props.style.height) - 1
+      : 1
+  );
 
   const setNativeHeight = useCallback(
-    (event: NativeSyntheticEvent<{ height: number; target: number }>) => {
-      setHeight(event.nativeEvent.height);
+    (event: NativeSyntheticEvent<{ height?: number; target: number }>) => {
+      if (event.nativeEvent.height) {
+        setHeight(event.nativeEvent.height);
+      } else {
+        if (props.style?.height) {
+          setHeight(props.style.height);
+        }
+      }
     },
-    []
+    [props.style]
   );
 
   const handleNativeError = useCallback(
     (event: NativeSyntheticEvent<KlarnaOSMViewError>) => {
       props.onOSMViewError?.(event.nativeEvent);
+      setHeight(0);
     },
     [props]
   );
@@ -71,7 +83,7 @@ export const KlarnaOnsiteMessagingView: React.FC<KlarnaOnsiteMessagingProps> = (
   return (
     <KlarnaOnsiteMessagingViewManager
       {...props}
-      style={{ overflow: 'hidden', height, ...props.style }}
+      style={{ ...props.style, height }}
       onHeightChange={setNativeHeight}
       onOSMViewError={handleNativeError}
     />

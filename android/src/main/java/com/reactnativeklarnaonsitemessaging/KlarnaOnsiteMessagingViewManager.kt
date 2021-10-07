@@ -1,39 +1,67 @@
 package com.reactnativeklarnaonsitemessaging
 
-import android.graphics.Color
-import android.view.View
-import android.view.ViewGroup
-import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
+import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
-import com.klarna.mobile.sdk.api.KlarnaLoggingLevel
-import com.klarna.mobile.sdk.api.KlarnaMobileSDKCommon
-import com.klarna.mobile.sdk.api.osm.KlarnaOSMEnvironment
-import com.klarna.mobile.sdk.api.osm.KlarnaOSMRegion
-import com.klarna.mobile.sdk.api.osm.KlarnaOSMTheme
-import com.klarna.mobile.sdk.api.osm.KlarnaOSMView
 
-class KlarnaOnsiteMessagingViewManager : SimpleViewManager<KlarnaOSMView>() {
-  override fun getName() = "KlarnaOnsiteMessagingView"
+class KlarnaOnsiteMessagingViewManager : ViewGroupManager<KlarnaOnsiteMessagingLayout>() {
 
-  override fun createViewInstance(reactContext: ThemedReactContext): KlarnaOSMView {
-    KlarnaMobileSDKCommon.setLoggingLevel(KlarnaLoggingLevel.Verbose)
-
-    val osmView = KlarnaOSMView(reactContext)
-
-    osmView.clientId = "BruhMehTest"
-    osmView.placementKey = "Key"
-    osmView.locale = "locale"
-    osmView.environment = KlarnaOSMEnvironment.DEMO
-    osmView.region = KlarnaOSMRegion.EU
-    osmView.theme = KlarnaOSMTheme.AUTOMATIC
-    osmView.hostActivity = reactContext.currentActivity
-
-    return osmView
+  @ReactProp(name = "clientId")
+  fun setClientId(view: KlarnaOnsiteMessagingLayout, clientId: String) {
+    with(view) {
+      this.clientId = clientId
+    }
   }
 
-  @ReactProp(name = "color")
-  fun setColor(view: View, color: String) {
-    view.setBackgroundColor(Color.parseColor(color))
+  @ReactProp(name = "placementKey")
+  fun setPlacementKey(view: KlarnaOnsiteMessagingLayout, placementKey: String) {
+    with(view) {
+      this.placementKey = placementKey
+    }
+  }
+
+  @ReactProp(name = "locale")
+  fun setLocale(view: KlarnaOnsiteMessagingLayout, locale: String) {
+    with(view) {
+      this.locale = locale
+    }
+  }
+
+  @ReactProp(name = "environment")
+  fun setEnvironment(view: KlarnaOnsiteMessagingLayout, environment: Int) {
+    with(view) {
+      this.environment = environment
+    }
+  }
+
+  @ReactProp(name = "region")
+  fun setRegion(view: KlarnaOnsiteMessagingLayout, region: Int) {
+    with(view) {
+      this.region = region
+    }
+  }
+
+  @ReactProp(name = "purchaseAmount")
+  fun setPurchaseAmount(view: KlarnaOnsiteMessagingLayout, purchaseAmount: Int?) {
+    with(view) {
+      this.purchaseAmount = purchaseAmount
+    }
+  }
+
+  override fun onAfterUpdateTransaction(view: KlarnaOnsiteMessagingLayout) {
+    view.setupOSMView()
+  }
+
+  override fun getName() = "KlarnaOnsiteMessagingView"
+
+  override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+    return mutableMapOf(
+      "onOSMViewError" to mutableMapOf("registrationName" to "onOSMViewError"),
+      "onHeightChange" to mutableMapOf("registrationName" to "onHeightChange")
+    )
+  }
+
+  override fun createViewInstance(reactContext: ThemedReactContext): KlarnaOnsiteMessagingLayout {
+    return KlarnaOnsiteMessagingLayout(reactContext, KlarnaOnsiteMessagingEventEmitter(reactContext))
   }
 }

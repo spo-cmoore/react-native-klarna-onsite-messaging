@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import {
   KlarnaOnsiteMessagingView,
   KlarnaOSMEnvironment,
@@ -42,8 +42,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 16,
   },
   box: {
     width: '100%',
+    height: Platform.OS === 'android' ? 85 : undefined,
   },
 });
