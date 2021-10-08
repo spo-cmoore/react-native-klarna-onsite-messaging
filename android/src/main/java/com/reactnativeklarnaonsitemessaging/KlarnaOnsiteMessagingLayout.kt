@@ -31,6 +31,7 @@ class KlarnaOnsiteMessagingLayout(
     osmView.locale = locale
     osmView.environment = KlarnaOSMEnvironment::class.fromRawValue(environment)
     osmView.region = KlarnaOSMRegion::class.fromRawValue(region)
+    osmView.purchaseAmount = purchaseAmount?.toLong()
     osmView.hostActivity = reactContext.currentActivity
 
     osmView.render(RenderResult {
