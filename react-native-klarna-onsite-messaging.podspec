@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 
   #s.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   #s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  s.requires_arc = true
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
