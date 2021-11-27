@@ -13,6 +13,9 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "10.0" }
   s.source       = { :git => "https://github.com/TheLonelyAstronaut/react-native-klarna-onsite-messaging.git", :tag => "#{s.version}" }
 
+  s.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+  s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
+
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
