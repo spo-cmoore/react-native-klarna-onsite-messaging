@@ -12,7 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1A2F3A8944CCE947D526D8D7 /* libPods-KlarnaOnsiteMessagingExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E150324990E07164723EDF6C /* libPods-KlarnaOnsiteMessagingExample.a */; };
+		21C763F03DAA6184F1C4846A /* libPods-KlarnaOnsiteMessagingExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A128441FAA172BD4F40D29 /* libPods-KlarnaOnsiteMessagingExample.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -44,7 +44,6 @@
 		00E356F21AD99517003FC87E /* KlarnaOnsiteMessagingExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KlarnaOnsiteMessagingExampleTests.m; sourceTree = "<group>"; };
 		0D935AE8270479C6004B909C /* KlarnaOnsiteMessagingExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KlarnaOnsiteMessagingExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		0D935AE9270479C6004B909C /* Bridging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridging.swift; sourceTree = "<group>"; };
-		0DC5D8BF91F48473B0778789 /* Pods-KlarnaOnsiteMessagingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlarnaOnsiteMessagingExample.debug.xcconfig"; path = "Target Support Files/Pods-KlarnaOnsiteMessagingExample/Pods-KlarnaOnsiteMessagingExample.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* KlarnaOnsiteMessagingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KlarnaOnsiteMessagingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KlarnaOnsiteMessagingExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = KlarnaOnsiteMessagingExample/AppDelegate.m; sourceTree = "<group>"; };
@@ -54,10 +53,11 @@
 		2D02E47B1E0B4A5D006451C7 /* KlarnaOnsiteMessagingExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KlarnaOnsiteMessagingExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* KlarnaOnsiteMessagingExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KlarnaOnsiteMessagingExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = KlarnaOnsiteMessagingExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D658A362C04137DEBFB0AD2C /* Pods-KlarnaOnsiteMessagingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlarnaOnsiteMessagingExample.release.xcconfig"; path = "Target Support Files/Pods-KlarnaOnsiteMessagingExample/Pods-KlarnaOnsiteMessagingExample.release.xcconfig"; sourceTree = "<group>"; };
-		E150324990E07164723EDF6C /* libPods-KlarnaOnsiteMessagingExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KlarnaOnsiteMessagingExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99D2D9BED293AC6B5B6D7322 /* Pods-KlarnaOnsiteMessagingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlarnaOnsiteMessagingExample.debug.xcconfig"; path = "Target Support Files/Pods-KlarnaOnsiteMessagingExample/Pods-KlarnaOnsiteMessagingExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A128441FAA172BD4F40D29 /* libPods-KlarnaOnsiteMessagingExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KlarnaOnsiteMessagingExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F64EA9747A5722AAED4912E3 /* Pods-KlarnaOnsiteMessagingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KlarnaOnsiteMessagingExample.release.xcconfig"; path = "Target Support Files/Pods-KlarnaOnsiteMessagingExample/Pods-KlarnaOnsiteMessagingExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2F3A8944CCE947D526D8D7 /* libPods-KlarnaOnsiteMessagingExample.a in Frameworks */,
+				21C763F03DAA6184F1C4846A /* libPods-KlarnaOnsiteMessagingExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +130,7 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				E150324990E07164723EDF6C /* libPods-KlarnaOnsiteMessagingExample.a */,
+				A9A128441FAA172BD4F40D29 /* libPods-KlarnaOnsiteMessagingExample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,8 +138,8 @@
 		6B9684456A2045ADE5A6E47E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0DC5D8BF91F48473B0778789 /* Pods-KlarnaOnsiteMessagingExample.debug.xcconfig */,
-				D658A362C04137DEBFB0AD2C /* Pods-KlarnaOnsiteMessagingExample.release.xcconfig */,
+				99D2D9BED293AC6B5B6D7322 /* Pods-KlarnaOnsiteMessagingExample.debug.xcconfig */,
+				F64EA9747A5722AAED4912E3 /* Pods-KlarnaOnsiteMessagingExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -203,14 +203,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "KlarnaOnsiteMessagingExample" */;
 			buildPhases = (
-				3850D8C297446DC3ACE404AB /* [CP] Check Pods Manifest.lock */,
+				5970F341A4C973FAF3D42664 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				9CFD1AC81FFE2CF97176F6A0 /* [CP] Embed Pods Frameworks */,
-				AD5B02459FA6A5F61BCC3D65 /* [CP] Copy Pods Resources */,
+				196EA15A8AAE613BEC4FF660 /* [CP] Embed Pods Frameworks */,
+				941B61C43A1BBFE8DB710EB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,43 +354,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		3850D8C297446DC3ACE404AB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KlarnaOnsiteMessagingExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9CFD1AC81FFE2CF97176F6A0 /* [CP] Embed Pods Frameworks */ = {
+		196EA15A8AAE613BEC4FF660 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -412,7 +376,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KlarnaOnsiteMessagingExample/Pods-KlarnaOnsiteMessagingExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD5B02459FA6A5F61BCC3D65 /* [CP] Copy Pods Resources */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		5970F341A4C973FAF3D42664 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KlarnaOnsiteMessagingExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		941B61C43A1BBFE8DB710EB5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,7 +567,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DC5D8BF91F48473B0778789 /* Pods-KlarnaOnsiteMessagingExample.debug.xcconfig */;
+			baseConfigurationReference = 99D2D9BED293AC6B5B6D7322 /* Pods-KlarnaOnsiteMessagingExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -634,7 +634,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D658A362C04137DEBFB0AD2C /* Pods-KlarnaOnsiteMessagingExample.release.xcconfig */;
+			baseConfigurationReference = F64EA9747A5722AAED4912E3 /* Pods-KlarnaOnsiteMessagingExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
