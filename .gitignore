@@ -60,3 +60,5 @@ android/keystores/debug.keystore
 lib/
 
 example/.env
+
+.npmrc

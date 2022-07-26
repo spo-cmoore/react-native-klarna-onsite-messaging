@@ -1,6 +1,6 @@
 {
-  "name": "react-native-klarna-onsite-messaging",
-  "version": "0.2.1",
+  "name": "@spo-cmoore/react-native-klarna-onsite-messaging",
+  "version": "1.0.0",
   "description": "Klarna On-Site Messaging SDK for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -88,23 +88,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "eslintConfig": {
     "root": true,
