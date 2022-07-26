@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import {
   KlarnaOnsiteMessagingView,
   KlarnaOSMEnvironment,
@@ -9,6 +9,7 @@ import {
 } from 'react-native-klarna-onsite-messaging';
 import { useState } from 'react';
 import Config from 'react-native-config';
+import { styles } from './App.style';
 
 export const CLIENT_ID = Config.CLIENT_ID;
 export const PLACEMENT_KEY = Config.PLACEMENT_KEY;
@@ -36,16 +37,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 16,
-  },
-  box: {
-    width: '100%',
-    height: Platform.OS === 'android' ? 85 : undefined,
-  },
-});
