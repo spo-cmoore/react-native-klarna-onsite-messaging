@@ -50,7 +50,7 @@ const KlarnaOnsiteMessagingViewManager =
 export const KlarnaOnsiteMessagingView: React.FC<
   KlarnaOnsiteMessagingProps
 > = ({ style, onOSMViewError, ...restProps }) => {
-  const [nativeHeight, setNativeHeight] = useState<number | string>(0);
+  const [nativeHeight, setNativeHeight] = useState<number | string>(1);
 
   const handleHeightChange = useCallback(
     (event: NativeSyntheticEvent<{ height?: number }>) => {
