@@ -38,9 +38,7 @@ type InternalKlarnaOnsiteMessagingProps = Omit<
   KlarnaOnsiteMessagingProps,
   'onOSMViewError'
 > & {
-  onHeightChange: (
-    event: NativeSyntheticEvent<{ height?: number; target: number }>
-  ) => void;
+  onHeightChange: (event: NativeSyntheticEvent<{ height?: number }>) => void;
   onOSMViewError: (event: NativeSyntheticEvent<KlarnaOSMViewError>) => void;
 };
 
@@ -49,41 +47,33 @@ const KlarnaOnsiteMessagingViewManager =
     'KlarnaOnsiteMessagingView'
   );
 
-export const KlarnaOnsiteMessagingView: React.FC<KlarnaOnsiteMessagingProps> = (
-  props: KlarnaOnsiteMessagingProps
-) => {
-  const [height, setHeight] = useState<number | string>(
-    props.style?.height && typeof props.style.height === 'number'
-      ? Number(props.style.height) - 1
-      : 1
-  );
+export const KlarnaOnsiteMessagingView: React.FC<
+  KlarnaOnsiteMessagingProps
+> = ({ style, onOSMViewError, ...restProps }) => {
+  const [nativeHeight, setNativeHeight] = useState<number | string>(1);
 
-  const setNativeHeight = useCallback(
-    (event: NativeSyntheticEvent<{ height?: number; target: number }>) => {
+  const handleHeightChange = useCallback(
+    (event: NativeSyntheticEvent<{ height?: number }>) => {
       if (event.nativeEvent.height) {
-        setHeight(event.nativeEvent.height);
-      } else {
-        if (props.style?.height) {
-          setHeight(props.style.height);
-        }
+        setNativeHeight(event.nativeEvent.height);
       }
     },
-    [props.style]
+    []
   );
 
   const handleNativeError = useCallback(
     (event: NativeSyntheticEvent<KlarnaOSMViewError>) => {
-      props.onOSMViewError?.(event.nativeEvent);
-      setHeight(0);
+      onOSMViewError?.(event.nativeEvent);
+      setNativeHeight(0);
     },
-    [props]
+    [onOSMViewError]
   );
 
   return (
     <KlarnaOnsiteMessagingViewManager
-      {...props}
-      style={{ ...props.style, height }}
-      onHeightChange={setNativeHeight}
+      {...restProps}
+      style={{ height: nativeHeight, ...style }}
+      onHeightChange={handleHeightChange}
       onOSMViewError={handleNativeError}
     />
   );
