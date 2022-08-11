@@ -63,10 +63,6 @@ class KlarnaOnsiteMessagingView : UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        if rect == self.osmView.frame {
-            return
-        }
-        
         self.osmView.frame = rect
         
         let amount = Int(purchaseAmount)
