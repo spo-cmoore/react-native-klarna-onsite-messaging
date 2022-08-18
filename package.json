@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/TheLonelyAstronaut/react-native-klarna-onsite-messaging",
+  "repository": "https://github.com/spo-cmoore/react-native-klarna-onsite-messaging",
   "author": "Vadzim Filipovich <thelonelyastronaut1337@gmail.com> (https://github.com/TheLonelyAstronaut)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheLonelyAstronaut/react-native-klarna-onsite-messaging/issues"
+    "url": "https://github.com/spo-cmoore/react-native-klarna-onsite-messaging/issues"
   },
-  "homepage": "https://github.com/TheLonelyAstronaut/react-native-klarna-onsite-messaging#readme",
+  "homepage": "https://github.com/spo-cmoore/react-native-klarna-onsite-messaging#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
