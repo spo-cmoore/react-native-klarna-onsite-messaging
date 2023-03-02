@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   s.dependency "React-Core"
-  s.dependency "KlarnaMobileSDK/basic", "~> 2.2.2"
+  s.dependency "KlarnaMobileSDK/basic", "~> 2.4.1"
 end

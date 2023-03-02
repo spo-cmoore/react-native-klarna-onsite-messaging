@@ -70,19 +70,24 @@ class KlarnaOnsiteMessagingView : UIView {
         osmView.clientId = clientId
         osmView.placementKey = placementKey
         osmView.locale = locale
-        osmView.environment = KlarnaOSMEnvironment(rawValue: environment) ?? .demo
-        osmView.region = KlarnaOSMRegion(rawValue: region) ?? .eu
+
+        // osmView.environment = KlarnaOSMEnvironment(rawValue: environment) ?? .demo
+        // osmView.region = KlarnaOSMRegion(rawValue: region) ?? .eu
+
+        osmView.environment = .production
+        osmView.region = .na
+
         osmView.purchaseAmount = amount != 0 ? amount : nil
 
         osmView.hostViewController = self.reactViewController()
-        osmView.delegate = self
+        osmView.sizingDelegate = self
 
         osmView.render(callback: self.handleOSMViewError)
 
         self.addSubview(osmView)
     }
 
-    func handleOSMViewError(error: KlarnaMobileSDKError?) {
+    func handleOSMViewError(error: KlarnaError?) {
         if let onOSMViewError = onOSMViewError, let error = error {
             onOSMViewError([
                 "message": error.message,
@@ -93,8 +98,8 @@ class KlarnaOnsiteMessagingView : UIView {
     }
 }
 
-extension KlarnaOnsiteMessagingView: KlarnaOSMViewEventListener {
-    func klarnaOSMViewResized(_ height: CGFloat) {
+extension KlarnaOnsiteMessagingView: KlarnaSizingDelegate {
+    func klarnaComponent(_ klarnaComponent: KlarnaComponent, resizedToHeight height: CGFloat) {
         if let onHeightChange = onHeightChange {
             if height == 0 {
                 return
